@@ -1,0 +1,33 @@
+# Newest first. Use `bullets:` for a list; `description:` still works for prose.
+- institution: "Harvard Kempner Institute & UC Berkeley"
+  url: https://kempnerinstitute.harvard.edu/
+  role: "Research Fellow (Harvard) / Research Intern (UC Berkeley)"
+  advisor: "Qianqian Wang"
+  advisor_url: https://qianqianwang68.github.io/
+  date: "Aug 2025 – Present"
+  bullets:
+    - "Leading MoSE3, the first feed-forward model for dense world-space SE(3) motion estimation from monocular video."
+
+- institution: "EPFL"
+  url: https://www.epfl.ch/
+  role: "Research Intern, Summer@EPFL"
+  advisor: "Amir Zamir"
+  advisor_url: https://vilab.epfl.ch/zamir/
+  date: "Jun 2025 – Sep 2025"
+  bullets:
+    - "Built evaluation pipelines for 3D generation across meshes, point clouds, and Gaussian Splatting."
+
+- institution: "INSAIT"
+  url: https://insait.ai/
+  role: "Research Intern"
+  advisor: "Danda Pani Paudel, Jan-Nico Zaech"
+  date: "May 2024 – Aug 2024"
+  bullets:
+    - "Training-free open-vocabulary 3D semantic segmentation via language-grounded Gaussian Splatting, at 100× lower compute than prior methods."
+
+- institution: "JHU ARCADE Lab"
+  role: "Undergraduate Researcher"
+  advisor: "Mathias Unberath"
+  date: "Sep 2023 – Dec 2024"
+  bullets:
+    - "Text-promptable surgical tool segmentation for endoscopic video using foundation models, without fine-tuning."

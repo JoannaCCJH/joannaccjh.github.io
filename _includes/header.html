@@ -1,0 +1,11 @@
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="site-title" href="{{ '/' | relative_url }}">{{ site.author.name }}</a>
+    <nav class="site-nav">
+      {%- for item in site.nav -%}
+        {%- assign target = item.url | relative_url -%}
+        <a href="{{ target }}"{% if page.url == item.url %} aria-current="page"{% endif %}>{{ item.title }}</a>
+      {%- endfor -%}
+    </nav>
+  </div>
+</header>

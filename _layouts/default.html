@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: 'en' }}">
+<head>{%- include head.html -%}</head>
+<body>
+  {%- include header.html -%}
+  <main class="wrap">
+    {{ content }}
+  </main>
+  {%- include footer.html -%}
+  <script>
+    document.querySelectorAll('.bib-toggle').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var pre = btn.closest('.pub-body').querySelector('.bib');
+        var open = pre.hidden;
+        pre.hidden = !open;
+        btn.setAttribute('aria-expanded', String(open));
+      });
+    });
+  </script>
+</body>
+</html>

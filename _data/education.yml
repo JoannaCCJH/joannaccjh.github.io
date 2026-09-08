@@ -1,0 +1,11 @@
+# Grouped by school, so an institution is named once no matter how many
+# degrees you took there. Newest degree first.
+- school: Johns Hopkins University
+  url: https://www.jhu.edu/
+  degrees:
+    - degree: "M.S.E. in Computer Science"
+      note: "Combined B.S./M.S.E. Program"
+      date: "Jan 2026 – Dec 2026"
+    - degree: "B.S. in Computer Science and Applied Mathematics & Statistics"
+      note:
+      date: "Aug 2022 – Dec 2025"

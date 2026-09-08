@@ -1,0 +1,355 @@
+---
+---
+
+:root {
+  --bg:        #ffffff;
+  --fg:        #1a1a1a;
+  --muted:     #6b7280;
+  --rule:      #e5e7eb;
+  --accent:    #1d4ed8;
+  --accent-bg: #eff6ff;
+  --code-bg:   #f6f7f9;
+  --measure:   58rem;   /* overall page width */
+  --prose:     42rem;   /* running text stays readable */
+
+  /* Always render light, even if the visitor's OS is in dark mode. */
+  color-scheme: light;
+}
+
+* { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font: 400 17px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica,
+        Arial, sans-serif;
+  font-feature-settings: "kern" 1;
+  text-rendering: optimizeLegibility;
+}
+
+.wrap {
+  max-width: var(--measure);
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 2px; }
+a:hover { text-decoration-thickness: 2px; }
+
+img { max-width: 100%; height: auto; }
+
+/* ---------- Header ---------- */
+.site-header {
+  border-bottom: 1px solid var(--rule);
+  margin-bottom: 3rem;
+}
+.header-inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.5rem 1.5rem;
+  padding-top: 1.1rem;
+  padding-bottom: 1.1rem;
+}
+.site-title {
+  font-weight: 600;
+  font-size: 1.05rem;
+  letter-spacing: -0.01em;
+  color: var(--fg);
+  text-decoration: none;
+}
+.site-nav { display: flex; flex-wrap: wrap; gap: 1.1rem; }
+.site-nav a {
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 0.94rem;
+}
+.site-nav a:hover { color: var(--fg); }
+.site-nav a[aria-current="page"] { color: var(--fg); font-weight: 500; }
+
+/* ---------- Intro (homepage) ---------- */
+/* Name and title span the full width, above a photo + bio row. */
+.intro-head { margin-bottom: 1.75rem; }
+.intro-head h1 {
+  margin: 0 0 0.35rem;
+  font-size: 2.1rem;
+  font-weight: 650;
+  letter-spacing: -0.025em;
+  line-height: 1.15;
+}
+.intro-role { margin: 0; color: var(--muted); font-size: 1.02rem; }
+.intro-role a { color: inherit; }
+
+.intro {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: flex-start;
+  margin-bottom: 1.5rem;
+}
+/* Bio on the left, photo on the right. */
+.intro-bio { flex: 1 1 20rem; min-width: 0; order: 1; }
+.intro-bio > p:first-child { margin-top: 0; }
+.intro-bio > p:last-child { margin-bottom: 0; }
+.intro-photo {
+  flex: 0 0 260px;          /* photo column width — change this one number */
+  order: 2;
+  border-radius: 6px;
+  overflow: hidden;
+  background: var(--code-bg);
+}
+.intro-photo img { display: block; width: 100%; aspect-ratio: 1 / 1; object-fit: cover; }
+
+/* Availability notice. */
+.availability {
+  margin: 0 0 1.25rem;
+  padding: 0.6rem 0.85rem;
+  border-left: 3px solid #dc2626;
+  background: #fef2f2;
+  color: #b91c1c;
+  font-size: 0.95rem;
+  font-weight: 500;
+  border-radius: 0 4px 4px 0;
+}
+
+/* Contact links: one row under the intro, slash-separated. */
+.social {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 0.7rem;
+  margin: 0 0 0.5rem;
+  padding: 0;
+  font-size: 0.94rem;
+}
+.social li:not(:last-child)::after {
+  content: "/";
+  margin-left: 0.7rem;
+  color: var(--rule);
+}
+
+/* ---------- Sections ---------- */
+h2.section {
+  font-size: 0.82rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  color: var(--muted);
+  margin: 3rem 0 1.1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--rule);
+}
+
+.page-title {
+  font-size: 1.7rem;
+  font-weight: 650;
+  letter-spacing: -0.02em;
+  margin: 0 0 0.4rem;
+}
+.page-subtitle { color: var(--muted); margin: 0 0 2rem; }
+
+/* ---------- News ---------- */
+.news { list-style: none; margin: 0; padding: 0; }
+.news li {
+  display: flex;
+  gap: 1rem;
+  padding: 0.42rem 0;
+  font-size: 0.97rem;
+}
+.news time {
+  flex: 0 0 5.5rem;
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+  font-size: 0.9rem;
+  padding-top: 0.12rem;
+}
+
+/* ---------- Publications ---------- */
+.pub-list { list-style: none; margin: 0; padding: 0; }
+.pub {
+  display: flex;
+  align-items: flex-start;  /* thumbnail hugs its image, no stretched box */
+  gap: 1.25rem;
+  padding: 1.15rem 0;
+  border-bottom: 1px solid var(--rule);
+}
+.pub:last-child { border-bottom: 0; }
+.pub-thumb {
+  flex: 0 0 240px;          /* publication thumbnail width */
+  display: grid;
+  place-items: center;      /* centre the media when the row is taller */
+  border: 1px solid var(--rule);
+  border-radius: 4px;
+  overflow: hidden;
+  background: #fff;
+}
+.pub-thumb img,
+.pub-thumb video {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;        /* `focus:` in publications.yml picks the crop */
+}
+.pub-body { flex: 1 1 0; min-width: 0; }
+.pub-title { font-weight: 600; line-height: 1.4; margin-bottom: 0.15rem; }
+.pub-title a { color: var(--fg); text-decoration: none; }
+.pub-title a:hover { color: var(--accent); text-decoration: underline; }
+.pub-authors { font-size: 0.93rem; color: var(--muted); }
+.pub-authors strong { color: var(--fg); font-weight: 600; }
+.pub-venue { font-size: 0.93rem; color: var(--muted); font-style: italic; }
+.pub-note {
+  font-style: normal;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--accent);
+  background: var(--accent-bg);
+  border-radius: 3px;
+  padding: 0.1rem 0.4rem;
+  margin-left: 0.25rem;
+}
+.pub-links { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 0.45rem; }
+.pub-links a, .bib-toggle {
+  font-size: 0.85rem;
+  color: var(--accent);
+  text-decoration: none;
+  background: none;
+  border: 0;
+  padding: 0;
+  font-family: inherit;
+  cursor: pointer;
+}
+.pub-links a:hover, .bib-toggle:hover { text-decoration: underline; }
+.bib {
+  margin: 0.6rem 0 0;
+  padding: 0.7rem 0.85rem;
+  background: var(--code-bg);
+  border-radius: 4px;
+  font-size: 0.8rem;
+  line-height: 1.5;
+  overflow-x: auto;
+  white-space: pre;
+}
+[hidden] { display: none !important; }
+
+/* ---------- Simple entry lists (talks, teaching, projects) ---------- */
+.entries { list-style: none; margin: 0; padding: 0; }
+.entry {
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--rule);
+}
+.entry:last-child { border-bottom: 0; }
+.entry-title { font-weight: 600; }
+.entry-title a { color: var(--fg); }
+.entry-meta { font-size: 0.93rem; color: var(--muted); }
+.entry-desc { font-size: 0.95rem; margin: 0.3rem 0 0; }
+
+/* ---------- Records (experience) ---------- */
+.records { list-style: none; margin: 0; padding: 0; }
+.record { padding: 0 0 1.35rem; }
+.record:last-child { padding-bottom: 0; }
+.record-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+.record-title { font-weight: 600; min-width: 0; }
+.record-title a { color: var(--fg); text-decoration: none; }
+.record-title a:hover { color: var(--accent); text-decoration: underline; }
+.record-date {
+  flex: 0 0 auto;
+  color: var(--muted);
+  font-size: 0.92rem;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+/* Only the description steps in; role stays aligned with the institution. */
+.record-desc { padding-left: 1.25rem; }
+.record-sub { color: var(--muted); font-size: 0.95rem; }
+.record-sub a { color: inherit; }
+.record-desc { margin: 0.4rem 0 0; font-size: 0.95rem; }
+.record-bullets {
+  margin: 0.35rem 0 0;
+  padding-left: 2.5rem;     /* 1.25rem indent + room for the marker */
+  font-size: 0.95rem;
+}
+.record-bullets li { padding: 0.1rem 0; }
+.record-bullets li::marker { color: var(--muted); }
+
+/* ---------- Education (grouped by school) ---------- */
+.edu-school + .edu-school { margin-top: 1.4rem; }
+.edu-school-name { font-weight: 600; margin-bottom: 0.35rem; }
+.edu-school-name a { color: var(--fg); text-decoration: none; }
+.edu-school-name a:hover { color: var(--accent); text-decoration: underline; }
+.edu-list { list-style: none; margin: 0; padding: 0 0 0 1.25rem; }  /* indent under the school */
+.edu-item {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding: 0.28rem 0;
+}
+.edu-degree { min-width: 0; }
+.edu-note {
+  display: block;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+.edu-date {
+  flex: 0 0 auto;
+  color: var(--muted);
+  font-size: 0.92rem;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+/* ---------- Prose ---------- */
+.page p, .intro-bio p { margin: 0 0 1rem; }
+
+/* Long-form blog posts keep a readable line length; everything else
+   (intro, publications, entries, news) uses the full page width. */
+.post > p, .post > ul, .post > ol, .post > blockquote { max-width: var(--prose); }
+blockquote {
+  margin: 1.2rem 0;
+  padding-left: 1rem;
+  border-left: 3px solid var(--rule);
+  color: var(--muted);
+}
+code {
+  background: var(--code-bg);
+  padding: 0.1em 0.35em;
+  border-radius: 3px;
+  font-size: 0.88em;
+}
+pre { background: var(--code-bg); padding: 0.9rem 1rem; border-radius: 5px; overflow-x: auto; }
+pre code { background: none; padding: 0; }
+table { border-collapse: collapse; width: 100%; font-size: 0.95rem; }
+th, td { text-align: left; padding: 0.5rem 0.6rem; border-bottom: 1px solid var(--rule); }
+
+/* ---------- Footer ---------- */
+.site-footer {
+  margin-top: 5rem;
+  padding: 1.75rem 0;
+  border-top: 1px solid var(--rule);
+  color: var(--muted);
+  font-size: 0.88rem;
+}
+.site-footer p { margin: 0; }
+
+@media (max-width: 32rem) {
+  body { font-size: 16px; }
+  .intro-photo { flex-basis: 100%; max-width: 220px; order: 0; }
+  .pub { gap: 0.9rem; }
+  .pub-thumb { flex-basis: 100%; }
+  .news li { flex-direction: column; gap: 0.1rem; }
+  .edu-item { flex-direction: column; gap: 0.1rem; }
+  .record-head { flex-direction: column; gap: 0.1rem; }
+  .record-desc { padding-left: 0.75rem; }
+  .record-bullets { padding-left: 1.6rem; }
+  .edu-list { padding-left: 0.75rem; }
+  .news time { flex-basis: auto; }
+}

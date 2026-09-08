@@ -1,0 +1,47 @@
+# Newest first. Set `selected: true` to also show an entry on the homepage.
+# Every field except `title` and `authors` is optional — delete what you don't use.
+
+- title: "SceneSplat++: A Large Dataset and Comprehensive Benchmark for Language Gaussian Splatting"
+  authors: "Mengjiao Ma*, Qi Ma*, Yue Li*, Jiahuan Cheng, Runyi Yang, Bin Ren, Nikola Popovic, Mingqiang Wei, Nicu Sebe, Luc Van Gool, Theo Gevers, Martin R. Oswald, Danda Pani Paudel"
+  venue: "NeurIPS Datasets and Benchmarks Track"
+  year: 2025
+  selected: true
+  image: /assets/media/scenesplat.jpg
+  fit: contain               # show the whole teaser rather than cropping it
+  links:
+    arxiv: https://arxiv.org/abs/2506.08710
+    code: https://github.com/GaussianWorld/SceneSplat_Benchmark
+    project: https://gaussianworld.github.io/SceneSplat++/
+  bibtex: |
+    @inproceedings{ma2025scenesplatpp,
+      title     = {SceneSplat++: A Large Dataset and Comprehensive Benchmark
+                   for Language Gaussian Splatting},
+      author    = {Ma, Mengjiao and Ma, Qi and Li, Yue and Cheng, Jiahuan and
+                   Yang, Runyi and Ren, Bin and Popovic, Nikola and Wei, Mingqiang and
+                   Sebe, Nicu and Van Gool, Luc and Gevers, Theo and
+                   Oswald, Martin R. and Paudel, Danda Pani},
+      booktitle = {Advances in Neural Information Processing Systems (NeurIPS)
+                   Datasets and Benchmarks Track},
+      year      = {2025}
+    }
+
+- title: "Occam's LGS: An Efficient Approach for Language Gaussian Splatting"
+  authors: "Jiahuan Cheng, Jan-Nico Zaech, Luc Van Gool, Danda Pani Paudel"
+  venue: "British Machine Vision Conference (BMVC)"
+  year: 2025
+  selected: true
+  video: /assets/media/occamlgs.mp4
+  poster: /assets/media/occamlgs-poster.jpg
+  links:
+    pdf: https://bmva-archive.org.uk/bmvc/2025/assets/papers/Paper_694/paper.pdf
+    arxiv: https://arxiv.org/abs/2412.01807
+    code: https://github.com/insait-institute/OccamLGS
+    project: https://insait-institute.github.io/OccamLGS/
+  bibtex: |
+    @inproceedings{cheng2025occamlgs,
+      title     = {Occam's LGS: An Efficient Approach for Language Gaussian Splatting},
+      author    = {Cheng, Jiahuan and Zaech, Jan-Nico and Van Gool, Luc and
+                   Paudel, Danda Pani},
+      booktitle = {British Machine Vision Conference (BMVC)},
+      year      = {2025}
+    }

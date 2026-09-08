@@ -1,0 +1,57 @@
+{%- comment -%}
+  Renders one publication entry. Expects `include.pub`.
+{%- endcomment -%}
+{%- assign pub = include.pub -%}
+<li class="pub">
+  {%- if pub.video %}
+  <div class="pub-thumb">
+    <video src="{{ pub.video | relative_url }}"
+           {% if pub.poster %}poster="{{ pub.poster | relative_url }}"{% endif %}
+           autoplay loop muted playsinline preload="metadata"
+           style="object-fit: {{ pub.fit | default: 'cover' }}; object-position: {{ pub.focus | default: 'center' }}"></video>
+  </div>
+  {%- elsif pub.image %}
+  <div class="pub-thumb">
+    <img src="{{ pub.image | relative_url }}" alt="" loading="lazy"
+         style="object-fit: {{ pub.fit | default: 'cover' }}; object-position: {{ pub.focus | default: 'center' }}">
+  </div>
+  {%- endif %}
+  <div class="pub-body">
+    <div class="pub-title">
+      {%- if pub.links.project -%}
+        <a href="{{ pub.links.project }}">{{ pub.title }}</a>
+      {%- else -%}
+        {{ pub.title }}
+      {%- endif -%}
+    </div>
+    <div class="pub-authors">
+      {%- assign me = site.highlight_author -%}
+      {%- if me and me != '' -%}
+        {%- capture bold %}<strong>{{ me }}</strong>{% endcapture -%}
+        {{ pub.authors | replace: me, bold }}
+      {%- else -%}
+        {{ pub.authors }}
+      {%- endif -%}
+    </div>
+    <div class="pub-venue">
+      {{ pub.venue }}{% if pub.year %}, {{ pub.year }}{% endif %}
+      {%- if pub.note %} <span class="pub-note">{{ pub.note }}</span>{% endif -%}
+    </div>
+    {%- if pub.links %}
+    <div class="pub-links">
+      {%- if pub.links.pdf %}<a href="{{ pub.links.pdf | relative_url }}">PDF</a>{% endif -%}
+      {%- if pub.links.arxiv %}<a href="{{ pub.links.arxiv }}">arXiv</a>{% endif -%}
+      {%- if pub.links.code %}<a href="{{ pub.links.code }}">Code</a>{% endif -%}
+      {%- if pub.links.project %}<a href="{{ pub.links.project }}">Project</a>{% endif -%}
+      {%- if pub.links.slides %}<a href="{{ pub.links.slides | relative_url }}">Slides</a>{% endif -%}
+      {%- if pub.links.poster %}<a href="{{ pub.links.poster | relative_url }}">Poster</a>{% endif -%}
+      {%- if pub.bibtex %}
+      <button class="bib-toggle" type="button" aria-expanded="false">BibTeX</button>
+      {%- endif -%}
+    </div>
+    {%- endif -%}
+    {%- if pub.bibtex %}
+    <pre class="bib" hidden>{{ pub.bibtex | strip }}</pre>
+    {%- endif %}
+  </div>
+</li>
