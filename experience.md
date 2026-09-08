@@ -2,6 +2,7 @@
 layout: page
 title: Experience
 permalink: /experience/
+published: false   # hidden for now; set to true (or delete this line) to bring it back
 ---
 
 <h2 class="section">Research</h2>

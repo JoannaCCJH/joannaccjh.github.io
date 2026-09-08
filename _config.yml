@@ -44,8 +44,10 @@ nav:
     url: /
   - title: Publications
     url: /publications/
-  - title: Experience
-    url: /experience/
+  # Hidden for now — uncomment to show, and remove `published: false`
+  # from the top of experience.md.
+  # - title: Experience
+  #   url: /experience/
 
 # ---------------------------------------------------------------------------
 # Build settings
