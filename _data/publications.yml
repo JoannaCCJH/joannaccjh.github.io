@@ -1,6 +1,27 @@
 # Newest first. Set `selected: true` to also show an entry on the homepage.
 # Every field except `title` and `authors` is optional — delete what you don't use.
 
+- title: "MoSE3: Learning World-Space SE(3) at Every Pixel"
+  authors: "Jiahuan Cheng*, Zhiyi Li*, Tian Xia*, Ruojin Cai, Yilun Du, Qianqian Wang"
+  venue: "Neural Information Processing Systems (NeurIPS)"
+  year: 2026
+  note: Spotlight
+  selected: true
+  video: /assets/media/mose3.mp4
+  poster: /assets/media/mose3-poster.jpg
+  fit: contain               # keep the inset reference frame in view
+  links:
+    pdf: https://mose3-tracker.github.io/paper.pdf
+    project: https://mose3-tracker.github.io/
+  bibtex: |
+    @inproceedings{cheng2026mose3,
+      title     = {MoSE3: Learning World-Space SE(3) at Every Pixel},
+      author    = {Cheng, Joanna Jiahuan and Li, Zhiyi and Xia, Tian and
+                   Cai, Ruojin and Du, Yilun and Wang, Qianqian},
+      booktitle = {Advances in Neural Information Processing Systems (NeurIPS)},
+      year      = {2026}
+    }
+
 - title: "SceneSplat++: A Large Dataset and Comprehensive Benchmark for Language Gaussian Splatting"
   authors: "Mengjiao Ma*, Qi Ma*, Yue Li*, Jiahuan Cheng, Runyi Yang, Bin Ren, Nikola Popovic, Mingqiang Wei, Nicu Sebe, Luc Van Gool, Theo Gevers, Martin R. Oswald, Danda Pani Paudel"
   venue: "NeurIPS Datasets and Benchmarks Track"
