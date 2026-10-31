@@ -3,7 +3,7 @@
 
 - title: "MoSE3: Learning World-Space SE(3) at Every Pixel"
   authors: "Jiahuan Cheng*, Zhiyi Li*, Tian Xia*, Ruojin Cai, Yilun Du, Qianqian Wang"
-  venue: "Neural Information Processing Systems (NeurIPS)"
+  venue: "NeurIPS"
   year: 2026
   note: Spotlight
   selected: true
@@ -11,16 +11,9 @@
   poster: /assets/media/mose3-poster.jpg
   fit: contain               # keep the inset reference frame in view
   links:
-    pdf: https://mose3-tracker.github.io/paper.pdf
+    arxiv: https://arxiv.org/abs/2610.03716
+    code: https://github.com/mose3-tracker/MoSE3
     project: https://mose3-tracker.github.io/
-  bibtex: |
-    @inproceedings{cheng2026mose3,
-      title     = {MoSE3: Learning World-Space SE(3) at Every Pixel},
-      author    = {Cheng, Joanna Jiahuan and Li, Zhiyi and Xia, Tian and
-                   Cai, Ruojin and Du, Yilun and Wang, Qianqian},
-      booktitle = {Advances in Neural Information Processing Systems (NeurIPS)},
-      year      = {2026}
-    }
 
 - title: "SceneSplat++: A Large Dataset and Comprehensive Benchmark for Language Gaussian Splatting"
   authors: "Mengjiao Ma*, Qi Ma*, Yue Li*, Jiahuan Cheng, Runyi Yang, Bin Ren, Nikola Popovic, Mingqiang Wei, Nicu Sebe, Luc Van Gool, Theo Gevers, Martin R. Oswald, Danda Pani Paudel"
@@ -33,36 +26,15 @@
     arxiv: https://arxiv.org/abs/2506.08710
     code: https://github.com/GaussianWorld/SceneSplat_Benchmark
     project: https://gaussianworld.github.io/SceneSplat++/
-  bibtex: |
-    @inproceedings{ma2025scenesplatpp,
-      title     = {SceneSplat++: A Large Dataset and Comprehensive Benchmark
-                   for Language Gaussian Splatting},
-      author    = {Ma, Mengjiao and Ma, Qi and Li, Yue and Cheng, Jiahuan and
-                   Yang, Runyi and Ren, Bin and Popovic, Nikola and Wei, Mingqiang and
-                   Sebe, Nicu and Van Gool, Luc and Gevers, Theo and
-                   Oswald, Martin R. and Paudel, Danda Pani},
-      booktitle = {Advances in Neural Information Processing Systems (NeurIPS)
-                   Datasets and Benchmarks Track},
-      year      = {2025}
-    }
 
 - title: "Occam's LGS: An Efficient Approach for Language Gaussian Splatting"
   authors: "Jiahuan Cheng, Jan-Nico Zaech, Luc Van Gool, Danda Pani Paudel"
-  venue: "British Machine Vision Conference (BMVC)"
+  venue: "BMVC"
   year: 2025
   selected: true
   video: /assets/media/occamlgs.mp4
   poster: /assets/media/occamlgs-poster.jpg
   links:
-    pdf: https://bmva-archive.org.uk/bmvc/2025/assets/papers/Paper_694/paper.pdf
     arxiv: https://arxiv.org/abs/2412.01807
     code: https://github.com/insait-institute/OccamLGS
     project: https://insait-institute.github.io/OccamLGS/
-  bibtex: |
-    @inproceedings{cheng2025occamlgs,
-      title     = {Occam's LGS: An Efficient Approach for Language Gaussian Splatting},
-      author    = {Cheng, Jiahuan and Zaech, Jan-Nico and Van Gool, Luc and
-                   Paudel, Danda Pani},
-      booktitle = {British Machine Vision Conference (BMVC)},
-      year      = {2025}
-    }

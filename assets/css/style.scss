@@ -200,16 +200,11 @@ h2.section {
 .pub-title a:hover { color: var(--accent); text-decoration: underline; }
 .pub-authors { font-size: 0.93rem; color: var(--muted); }
 .pub-authors strong { color: var(--fg); font-weight: 600; }
-.pub-venue { font-size: 0.93rem; color: var(--muted); font-style: italic; }
+.pub-venue { font-size: 1rem; font-weight: 600; color: var(--fg); margin-top: 0.15rem; }
 .pub-note {
-  font-style: normal;
-  font-size: 0.8rem;
-  font-weight: 600;
+  font-weight: 700;
   color: #b91c1c;           /* same red as the availability notice */
-  background: #fef2f2;
-  border-radius: 3px;
-  padding: 0.1rem 0.4rem;
-  margin-left: 0.25rem;
+  margin-left: 0.4rem;
 }
 .pub-links { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 0.45rem; }
 .pub-links a, .bib-toggle {
